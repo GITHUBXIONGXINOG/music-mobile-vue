@@ -3,6 +3,7 @@
         <music-list title="今日推荐" v-if="todayRecommendData.length>0" :musicData="todayRecommendData"/>
         <music-list title="热门歌单" v-if="hotMusic.length>0" :musicData="hotMusic"/>
         <music-list title="摇滚歌曲" v-if="rockMusic.length>0" :musicData="rockMusic"/>
+        <music-list title="经典歌曲" v-if="oldMusic.length>0" :musicData="oldMusic"/>
     </div>
 </template>
 
@@ -15,6 +16,7 @@ export default {
             todayRecommendData: [],//今日推荐
             hotMusic:[],//热门歌单
             rockMusic:[],//摇滚音乐
+            oldMusic:[],//经典音乐
         }
     },
     components:{
@@ -50,6 +52,16 @@ export default {
             offset: 0
         }).then(res => {
             this.rockMusic = res.data.song_list
+
+        })
+
+        this.$api.getMusicInfo({
+            method:'baidu.ting.billboard.billList',
+            type: 22,
+            size: 7,
+            offset: 0
+        }).then(res => {
+            this.oldMusic = res.data.song_list
 
         })
 

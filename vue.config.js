@@ -1,6 +1,6 @@
 module.exports = {
     devServer: {
-        open: true, //配置自动启动浏览器 http://XXX.XXX.X.XX:7071/rest/XXX/
+        // open: true, //配置自动启动浏览器 http://XXX.XXX.X.XX:7071/rest/XXX/
         hotOnly: true, // 热更新
         proxy:{
             '/baidu_music_api':{ //匹配 /api
