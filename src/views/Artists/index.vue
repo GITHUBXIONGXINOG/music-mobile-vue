@@ -1,13 +1,18 @@
 <template>
-    <div>
-        Artists
+    <div class="artists">
+        <Nav />
+            Artists
     </div>
 </template>
 
 <script>
-export default {
-    name: "Artists"
+import Nav from "@/components/Nav";
 
+export default {
+    name: "Artists",
+    components:{
+        Nav
+    }
 }
 </script>
 

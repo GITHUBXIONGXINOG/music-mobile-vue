@@ -1,13 +1,17 @@
 <template>
-    <div>
+    <div class="top">
+        <Nav />
         Top
     </div>
 </template>
 
 <script>
+import Nav from "@/components/Nav";
 export default {
-    name: "Top"
-
+    name: "Top",
+    components: {
+        Nav
+    }
 }
 </script>
 
