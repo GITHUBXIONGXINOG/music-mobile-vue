@@ -1,17 +1,20 @@
 <template>
     <div class="home">
-         <Nav />
-        Home
+        <Nav />
+        <home-data />
     </div>
 </template>
 
 <script>
 import Nav from "@/components/Nav";
+import HomeData from "@/views/Home/HomeData";
 export default {
     name: "Home",
     components: {
-        Nav
-    }
+        Nav,//顶部导航
+        HomeData,//数据
+    },
+
 }
 </script>
 
